@@ -1,0 +1,3 @@
+FROM vincentchalamon/symfony
+
+EXPOSE 80:80
