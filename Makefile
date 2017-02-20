@@ -12,7 +12,7 @@ app-build-dev:
 	docker build -t $(project-name)-dev -f Dockerfile.dev .
 
 app-run: app-build
-	docker run -d -p 80:80 --name $(projct-name) $(project-name)
+	docker run -d -p 80:80 --name $(project-name) $(project-name)
 
 app-run-dev: app-build-dev
 	docker run -d -p 81:80 -v"`pwd`:/var/www/." --name $(project-name)-dev $(project-name)-dev
