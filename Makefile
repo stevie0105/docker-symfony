@@ -25,10 +25,10 @@ app-run: init app-build
 app-run-dev: init app-build-dev
 	docker run -d --net=$(project-name) -p 81:80 -v"`pwd`:/var/www/." --name $(project-name)-dev $(project-name)-dev
 
-app-container-console: app-run
+app-container-console:
 	docker exec -it $(project-name) bash
 
-app-container-console-dev: app-run-dev
+app-container-console-dev:
 	docker exec -it $(project-name)-dev bash
 
 app-stop: 
