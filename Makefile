@@ -84,6 +84,5 @@ myadmin-remove-image: myadmin-stop myadmin-remove-container
 ###################
 
 parameters:
-	@read -p "Enter your $(db) root password again:" password; \
-	printf "parameters: \n    database_host: mysql \n    database_port: 3306 \n    database_name: $(project-name) \n    database_user: $(project-name) \n    database_password: $$password \n    mailer_transport: smtp \n    mailer_host: 127.0.0.1 \n    mailer_user: null \n    mailer_password: null \n    secret: 9eb6ea75c64ffbb76244c15b8375ce74d30dfdb5" > ./app/config/parameters.yml
+	printf "parameters: \n    database_host: mysql \n    database_port: 3306 \n    database_name: $(project-name) \n    database_user: $(project-name) \n    database_password: $(project-name) \n    mailer_transport: smtp \n    mailer_host: 127.0.0.1 \n    mailer_user: null \n    mailer_password: null \n    secret: 9eb6ea75c64ffbb76244c15b8375ce74d30dfdb5" > ./app/config/parameters.yml
 
