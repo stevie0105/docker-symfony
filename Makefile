@@ -31,6 +31,14 @@ app-container-console:
 app-container-console-dev:
 	docker exec -it $(project-name)-dev bash
 
+app-container-symfony-console:
+	@read -p "Enter the symfony console command you want to execute:" command; \
+	docker exec -it $(project-name) bin/console $$command
+
+app-container-dev-symfony-console:
+	@read -p "Enter the symfony console command you want to execute:" command; \
+	docker exec -it $(project-name)-dev bin/console $$command
+
 app-stop: 
 	docker stop $(project-name)
 
